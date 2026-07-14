@@ -1,0 +1,36 @@
+# --- build artifacts ---
+build/
+*.obj
+*.exe
+*.lib
+*.exp
+*.pdb
+
+# --- third-party (kept outside the repo at ../third_party) ---
+third_party/
+
+# --- model weights / checkpoints / exports ---
+*.pt
+*.onnx
+*.bin
+runs/
+runs*/
+
+# --- datasets & downloaded assets ---
+data/
+*.zip
+
+# --- generated images / detection outputs ---
+*.ppm
+*.png
+*.jpg
+*.jpeg
+
+# --- python cache ---
+__pycache__/
+*.pyc
+
+# --- local editor / tool settings ---
+.claude/
+.vs/
+*.user
