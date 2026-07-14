@@ -4,6 +4,13 @@ C++ (LibTorch) 実装の **YOLOv5 学習＋推論**。PyTorch版 Ultralytics YOL
 C++ に移植したもの。学習の中身（モデル・損失・アンカーマッチング・逆伝播）を C++ で追える教材であり、
 小〜中規模データなら実用的にも学習を回せる。
 
+さらに `scratch/` には、**外部依存ゼロ（標準ライブラリのみ）で autograd から自作**した
+mini-YOLOv5 を収録（下記画像はその検出結果）。
+
+![results](assets/results.png)
+
+*依存ゼロ・自作autogradの mini-YOLOv5 が実写の人・車を検出（緑=検出, 赤=GT）。詳細は [`scratch/README.md`](scratch/README.md)。*
+
 ## 構成
 
 ```

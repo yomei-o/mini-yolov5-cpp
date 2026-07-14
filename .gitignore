@@ -25,6 +25,9 @@ data/
 *.png
 *.jpg
 *.jpeg
+# ...but keep documentation images under assets/
+!assets/
+!assets/*.png
 
 # --- python cache ---
 __pycache__/
