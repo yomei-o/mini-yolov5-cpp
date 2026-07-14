@@ -1,5 +1,7 @@
 # yolov5_cpp
 
+*[English](README.en.md) | 日本語*
+
 C++ (LibTorch) 実装の **YOLOv5 学習＋推論**。PyTorch版 Ultralytics YOLOv5 の学習パイプラインを
 C++ に移植したもの。学習の中身（モデル・損失・アンカーマッチング・逆伝播）を C++ で追える教材であり、
 小〜中規模データなら実用的にも学習を回せる。
