@@ -144,6 +144,20 @@ build/Release/scratch_yolo.exe          # 勾配チェック
 build/Release/scratch_yolo.exe train    # 学習→検出
 ```
 
+### Python版（`scratch_py/`）
+
+上記フルスクラッチ版の **NumPyベース移植**。DLフレームワーク（PyTorch等）は不使用、
+**NumPyの配列演算だけ**を土台に自作autograd（float64）で mini-YOLOv5 を学習する。
+C++版と1行ずつ読み比べられる。詳細は `scratch_py/README.md`。
+
+```bash
+cd scratch_py
+python main.py          # 勾配チェック（全opが数値微分と一致 ~1e-7）
+python main.py train    # 学習→検出（viz_*.png 出力）
+```
+
+NumPy以外の依存はゼロ（JPG/PNGを読むときだけ任意でPillow。PPMなら完全にNumPyのみ）。
+
 ## 制限・拡張余地
 
 - CPU 前提（CUDA版 LibTorch に差し替えれば GPU 学習も可。コードは device 自動判定済み）。

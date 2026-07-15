@@ -155,6 +155,21 @@ build/Release/scratch_yolo.exe          # gradient checks
 build/Release/scratch_yolo.exe train    # train → detect
 ```
 
+### Python version (`scratch_py/`)
+
+A **NumPy-based port** of the from-scratch version above. No deep-learning framework
+(PyTorch etc.) — a hand-written autograd engine (float64) on top of **NumPy array
+arithmetic** trains the same mini-YOLOv5, readable side-by-side with the C++ version.
+See [`scratch_py/README.en.md`](scratch_py/README.en.md).
+
+```bash
+cd scratch_py
+python main.py          # gradient checks (every op matches finite diff, ~1e-7)
+python main.py train    # train → detect (writes viz_*.png)
+```
+
+Zero dependencies beyond NumPy (Pillow only optionally, to read JPG/PNG; pure NumPy with PPM).
+
 ## Limitations / room to grow
 
 - CPU only (swap in CUDA LibTorch for GPU training — the code already auto-selects
